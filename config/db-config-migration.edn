@@ -1,0 +1,6 @@
+{:database-name "clinic"
+ :user-name "root"
+ :password "root"
+ :adapter "mysql"
+ :server-name "localhost"
+ :migration-file-name "clinic.sql"}

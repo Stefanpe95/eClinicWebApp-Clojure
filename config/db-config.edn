@@ -1,0 +1,6 @@
+{:user "root"
+ :password "root"
+ :subprotocol "mysql"
+ :adapter "mysql"
+ :subname "//localhost:3306/clinic"
+ :zeroDateTimeBehaviour "convertToNull"}
