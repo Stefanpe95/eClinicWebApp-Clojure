@@ -1,0 +1,113 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+.openbtn:hover {
+  background-color: #444;
+}
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+@media screen and (max-height: 450px) {
+  .sidebar {
+      padding-top: 15px;
+ }
+  .sidebar a {
+      font-size: 18px;
+ }
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+#myInput {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 0px 12px 0px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  margin-top: 20px;
+}
+.info {
+ background-color: #2196F3;
+  padding: 10px 28px 10px 28px !important;
+}
+.info:hover {
+ background: #0b7dda;
+}
+.danger {
+ background-color: #f44336;
+  padding: 10px 28px 10px 28px !important;
+}
+.danger:hover {
+ background: #da190b;
+}
+.btn-success {
+ background-color: #04AA6D;
+}
+.btn-success:hover {
+ background-color: #46a049;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+.grid-right {
+  grid-column-start: 5;
+}
+.grid-center {
+  grid-column-start: 3;
+}
+.error {
+  color: red;
+}

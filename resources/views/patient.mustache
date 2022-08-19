@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/page.css" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="/index">Home</a>
+    <a href="/department">Departments</a>
+    <a href="/doctor">Doctors</a>
+    <a href="/patient">Patients</a>
+    <a href="/appointment">Appointments</a>
+</div>
+<div id="main">
+    <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+    <div class="">
+    </div>
+    <div class="grid-container">
+        <div class="grid-center" >
+            <h2>Patients</h2>
+        </div>
+        <div class="grid-right">
+            <a type="button" href="/models/patient/create" class="btn btn-success">
+                <i class="fas fa-plus-circle"></i>
+                Add new Patient
+            </a>
+        </div>
+    </div>
+    <table id="myTable">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+            <th scope="col">E-Mail</th>
+            <th scope="col">DOB</th>
+            <th scope="col">Bloodtype</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#patient}}
+            <tr class="success">
+                <td>{{patientid}}</td>
+                <td>{{name}}</td>
+                <td>{{surname}}</td>
+                <td>{{email}}</td>
+                <td>{{dob}}</td>
+                <td>{{bloodtype}}</td>
+                <td>{{gender}}</td>
+                <td>
+                    <a type="button" href="/models/patient/{{patientid}}/update" class="btn info">
+                        <i class="fas fa-edit"></i>
+                        Edit
+                    </a>
+                </td>
+                <td>
+                    <a type="button" href="/models/patient/{{patientid}}/delete" class="btn danger">
+                        <i class="fas fa-trash-alt"></i>
+                        Remove
+                    </a>
+                </td>
+            </tr>
+        {{/patient}}
+        </tbody>
+    </table>
+</div>
+<script src="js/index.js"></script>
+</body>
+</html>

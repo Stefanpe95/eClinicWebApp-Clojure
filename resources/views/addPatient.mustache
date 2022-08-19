@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+    <link href="../../../css/page.css" rel="stylesheet">
+    <link href="../../../css/style.css" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="/index">Home</a>
+    <a href="/department">Departments</a>
+    <a href="/doctor">Doctors</a>
+    <a href="/patient">Patients</a>
+    <a href="/appointment">Appointments</a>
+</div>
+<div id="main">
+    <button class="openbtn" onclick="openNav()" style="pading-bot:15px">☰ Open Sidebar</button>
+
+    <div class="row">
+        <div class="col-75">
+            <div class="container">
+                <form action="/models/patient/insert" method="post" class="form" name="patient" novalidate="novalidate">
+                    <div class="row">
+                        <div class="col-75">
+                            <h3>Update patient</h3>
+                            <label for="email">Patient E-Mail</label>
+                            <input type="text" name="email" placeholder="E-Mail">
+                            <label for="name">Patient Name</label>
+                            <input type="text" name="name" placeholder="Name">
+                            <label for="surname">Patient Surname</label>
+                            <input type="text" name="surname" placeholder="Surname">
+                            <label for="dob" >DOB:</label>
+                            <input type="date" name="dob" value="{{patient.dob}}">
+                            <label for="bloodtype">Bloodtype</label>
+                            <select name="bloodtypeId">
+                                {{#bloodtype}}
+                                    <option value="{{bloodtypeid}}">{{bloodtypelabel}}</option>
+                                {{/bloodtype}}
+                            </select>
+                            <label for="gender">Gender</label>
+                            <select name="genderId">
+                                {{#gender}}
+                                    <option value="{{genderid}}">{{genderlabel}}</option>
+                                {{/gender}}
+                            </select>
+                            </div>
+                    </div>
+                    <input type="submit" value="Add a patient" class="btn-department btn btn-success">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="../../../js/patient.js"></script>
+</body>
+</html>
