@@ -1,5 +1,5 @@
 {:user "root"
  :password "root"
  :subprotocol "mysql"
- :subname "//localhost:3306/clojureclinic"
+ :subname "//localhost:3306/clinic"
  :zeroDateTimeBehaviour "convertToNull"}
